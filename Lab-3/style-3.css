@@ -1,0 +1,129 @@
+/* General Styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar - Flexbox */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: black;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: yellow;
+    transform: scale(1.1);
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    background: linear-gradient(to right, #2196f3, #00bcd4);
+    color: white;
+    text-align: center;
+    animation: fadeIn 2s ease;
+}
+
+/* Button Hover + Transition */
+.btn {
+    padding: 0.7rem 2rem;
+    font-size: 1.2rem;
+    border: none;
+    background: white;
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background: yellow;
+    transform: translateY(-4px);
+}
+
+/* CSS Grid Section */
+.about-grid {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.box {
+    padding: 2rem;
+    background: #f2f2f2;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.2rem;
+    transition: 0.3s ease;
+}
+
+.box:hover {
+    background: #d1e8ff;
+    transform: scale(1.05);
+}
+
+/* Projects - Flexbox */
+.project-container {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin: 1rem;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #eee;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    background: lightgreen;
+    transform: rotate(3deg);
+}
+
+/* Keyframe Animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Media Queries (Mobile First) */
+@media (max-width: 600px) {
+    .nav-links {
+        display: none;
+    }
+
+    .navbar {
+        justify-content: center;
+    }
+
+    .hero {
+        height: 70vh;
+    }
+}
