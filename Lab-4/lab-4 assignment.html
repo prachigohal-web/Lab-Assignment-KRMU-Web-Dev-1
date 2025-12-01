@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple JS Quiz</title>
+</head>
+<body>
+  <h2>JavaScript Quiz</h2>
+  <button onclick="runQuiz()">Start Quiz</button>
+
+  <script>
+    // Quiz questions array
+    const quizQuestions = [
+      { question: "What is the capital of France?", answer: "Paris" },
+      { question: "Which planet is known as the Red Planet?", answer: "Mars" },
+      { question: "What is 5 + 7?", answer: "12" },
+      { question: "Who is President of Russia?", answer: "Vladimir Putin" },
+      { question: "Which language is used for web development?", answer: "JavaScript" }
+    ];
+
+    // Function to run quiz
+    function runQuiz() {
+      let score = 0; // initialize score
+
+      for (let i = 0; i < quizQuestions.length; i++) {
+        let userAnswer = prompt(quizQuestions[i].question);
+
+        if (userAnswer !== null &&
+            userAnswer.toLowerCase().trim() === quizQuestions[i].answer.toLowerCase().trim()) {
+          score++;
+        }
+      }
+
+      // Show output
+      alert(`Quiz Over! Your final score is: ${score} out of ${quizQuestions.length}`);
+    }
+  </script>
+</body>
+</html>
